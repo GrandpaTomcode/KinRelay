@@ -10,10 +10,8 @@ A system to get you connected with your emergency contacts when all else fails
 
 # Screenshots 🖼️
 
-### Sign-In Page
 ![Sign-In](./static/screenshots/signin.png)
 
-### Contact List Page
 ![Contacts](./static/screenshots/contacts.png)
 
 # KinRelay
