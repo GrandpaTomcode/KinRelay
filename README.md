@@ -3,6 +3,9 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blue)
 ![Status](https://img.shields.io/badge/status-In_Development-orange)
+
+---
+
 A system to get you connected with your emergency contacts when all else fails
 
 # Screenshots 🖼️
