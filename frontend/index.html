@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>KinRelay - Sign In</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="../static/favicon.ico"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="kinLogoCont">
+      <img src="../static/logo.png" class="kinLogo" alt="" />
+      <h2>KinRelay</h2>
+    </div>
+    <form id="pin-form" class="signInCont">
+      <input
+        id="pin-input"
+        class="pinInput"
+        type="password"
+        name="pin"
+        pattern="[0-9]{6}"
+        maxlength="6"
+        inputmode="numeric"
+        placeholder="Enter Pin Code"
+        required
+      />
+      <button class="pinBtn" type="submit">Sign In</button>
+    </form>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("pin-form");
+        form.addEventListener("submit", async err => {
+          err.preventDefault();
+
+          const pin = document.getElementById("pin-input").value;
+
+          localStorage.setItem("kinrelay_pin", pin);
+
+          const res = await fetch("http://localhost:9000/api/contacts", {
+            headers: {
+              "X-Pin": pin,
+            },
+          }).then(res => {
+            console.log(res.headers.get("Access-Control-Allow-Origin"));
+            return res;
+          });
+          if (res.ok) {
+            window.location.href = "/contacts.html";
+          } else {
+            alert("Invalid Pin. Please Try Again.");
+          }
+        });
+      });
+    </script>
+  </body>
+  <footer></footer>
+</html>
