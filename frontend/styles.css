@@ -4,9 +4,10 @@ body {
   justify-content: center;
   align-content: center;
   text-align: center;
-  background-color: #457b9d;
+  background-color: #392f5a;
   font-family: "Inter", sans-serif;
   margin: 0px;
+  margin-top: 80px;
   padding: 0px;
   width: 100%;
   height: 70vh;
@@ -25,7 +26,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 4em;
+  font-size: 3.5em;
   margin: 0px;
 }
 .pinInput {
@@ -33,23 +34,26 @@ h2 {
   font-family: "Inter", sans-serif;
   color: #457b9d;
   background-color: #f1faee;
-  width: 75%;
-  height: 50px;
+  width: 80%;
+  height: 45px;
   text-align: center;
   font-size: 1.2em;
   border: none;
   border-radius: 15px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.22);
 }
+
 .signInCont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .pinInput {
   outline: none;
 }
+
 .pinInput::placeholder {
   color: #457b9d;
   font-weight: 400;
@@ -67,4 +71,92 @@ h2 {
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
+}
+
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  width: 50px;
+  height: 40px;
+}
+
+.title {
+  color: white;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.contactTile {
+  background-image: url("../static/logo.png");
+  background-color: rgba(255, 255, 255, 0.75);
+  background-blend-mode: lighten;
+  background-position: top right, bottom left;
+  background-size: cover;
+  border-radius: 15px;
+  width: 90%;
+  height: 450px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
+}
+
+.contactHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contactHeader h3 {
+  margin-left: 20px;
+}
+
+.profilePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfo {
+  padding: 0px;
+  margin-left: 20px;
+}
+
+.contactInfo li {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.contactNotes {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.contactNotes h2 {
+  color: black;
+  font-size: 1.5em;
 }
